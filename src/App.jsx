@@ -4,20 +4,21 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "./lib/firebase";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Booking from "./pages/Booking";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Bill from "./pages/billGenerator"; 
-import { motion } from "framer-motion";
+import Bill from "./pages/billGenerator";
 import MenuDisplay from "./pages/Menu";
 import AdminBilling from "./pages/AdminBilling";
-import Bills from "./pages/Bills"
+import Bills from "./pages/Bills";
 import BillHistory from "./pages/BillHistory";
 import FoodGallery from "./pages/FoodGallery";
 
+import { motion } from "framer-motion";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -55,7 +56,7 @@ export default function App() {
 
   if (loading)
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-white">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-white">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
@@ -66,31 +67,34 @@ export default function App() {
           animate={{ opacity: [0.3, 1, 0.3] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
-          Hotel Rajshik
+          Hotel Rajsik
         </motion.h1>
-        <p className="mt-2 text-gray-500 font-body">
-          Authentic Taste Awaits...
-        </p>
+        <p className="mt-2 text-gray-500 font-body">Authentic Taste Awaits...</p>
       </div>
     );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="w-screen min-h-screen bg-gray-50 overflow-x-hidden">
+      {/* ✅ Full-width Navbar */}
       <Navbar user={user ? { ...user, role } : null} onLogout={handleLogout} />
 
-      <main className="w-full mx-full p-6">
+      {/* ✅ Full-screen main section */}
+      <main className="w-full min-h-screen bg-gray-50">
         <Routes>
+          {/* Public routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/menu" element={<MenuDisplay />} />
           <Route path="/gallery" element={<FoodGallery />} />
-          {/* Protect Booking for logged-in users only */}
+
+          {/* User routes */}
           <Route
             path="/booking"
             element={user ? <Booking /> : <Navigate to="/login" replace />}
           />
-          {/* Protect Admin route */}
+
+          {/* Admin routes */}
           <Route
             path="/admin"
             element={
@@ -121,9 +125,7 @@ export default function App() {
               )
             }
           />
-          ;
-          <Route path="/bills" element={<Bills />} />;
-          {/* ✅ Added Bill route - only for admin */}
+          <Route path="/bills" element={<Bills />} />
           <Route
             path="/billGenerator"
             element={
