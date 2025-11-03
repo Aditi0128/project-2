@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
   "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "postinstall": "chmod +x node_modules/.bin/vite || exit 0"
+  "build": "npm rebuild esbuild && vite build",
+  "preview": "vite preview"
 },
+
 
   "dependencies": {
     "firebase": "^12.5.0",
