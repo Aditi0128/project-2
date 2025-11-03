@@ -11,29 +11,32 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* Ensure full screen layout */
+/* Full screen layout */
 html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: #fff; /* optional default bg */
+
+  /* Background color for whole app */
+  background-color: #f9fafb; /* light neutral gray — adjust if you want */
 }
 
-/* Make all direct child containers stretch full width */
+/* Make all main containers full width and transparent */
 body > * {
   width: 100%;
   max-width: none !important;
   margin: 0 !important;
   padding: 0;
+  background-color: transparent !important;
 }
 
-/* For Tailwind's container utility: remove max-width */
+/* Tailwind container fix: remove max-width and force transparency */
 .container {
   max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important; /* removes any subtle shadow if applied */
 }
