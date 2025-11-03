@@ -23,7 +23,7 @@ export default function Navbar() {
           to="/"
           className="text-2xl font-heading text-primary tracking-wide hover:text-gold transition"
         >
-          Hotel Rajshik
+          Hotel Rajsik
         </Link>
 
         {/* Desktop Links */}
