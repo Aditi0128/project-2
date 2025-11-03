@@ -289,7 +289,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-300 py-12 w-full">
         <div className="max-w-6xl mx-auto text-center space-y-4">
           <p className="text-gray-400">
-            © 2025 Hotel Rajshik • Crafted with ❤️ for food lovers
+            © 2025 Hotel Rajsik • Crafted with ❤️ for food lovers
           </p>
           <div className="flex justify-center gap-8 text-xl">
             <a href="#" className="hover:text-amber-400 transition">
