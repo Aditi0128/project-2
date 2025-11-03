@@ -193,48 +193,30 @@ export default function Home() {
       </motion.section>
 
       {/* REVIEWS */}
-      <motion.section
-        className="py-24 bg-gradient-to-b from-amber-50 to-amber-100"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-heading mb-10 text-gray-900">
-            What Our Guests Say
-          </h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {[1, 2, 3].map((r) => (
-              <motion.div
-                key={r}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white p-8 rounded-2xl shadow-lg w-80 text-left border border-amber-100"
-              >
-                <div className="flex items-center mb-3 text-yellow-400 text-lg">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-                <p className="text-gray-700 italic mb-4">
-                  “Amazing food, great ambiance and quick service. Definitely
-                  coming again!”
-                </p>
-                <p className="font-semibold text-gray-900">— Google Reviewer</p>
-              </motion.div>
-            ))}
-          </div>
+     {/* GOOGLE REVIEWS SECTION */}
+<motion.section
+  id="reviews"
+  className="py-24 bg-gradient-to-b from-amber-50 to-amber-100"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-4xl font-heading mb-10 text-gray-900">
+      What Our Guests Say
+    </h2>
 
-          <a
-            href="https://www.google.com/maps/place/Hotel+Rajshik"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 mt-10 text-amber-700 hover:text-amber-800 font-medium transition"
-          >
-            <FaGoogle /> View More Reviews
-          </a>
-        </div>
-      </motion.section>
+    {/* Elfsight Google Reviews Widget */}
+    <div className="flex justify-center">
+      <div
+        className="elfsight-app-2a0af38d-4d24-4099-94ca-950ff8c94586"
+        data-elfsight-app-lazy
+      ></div>
+    </div>
+  </div>
+</motion.section>
+
 
       {/* CONTACT */}
       <motion.section
