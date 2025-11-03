@@ -295,7 +295,7 @@ export default function Home() {
             <a href="#" className="hover:text-amber-400 transition">
               <FaFacebook />
             </a>
-            <a href="#" className="hover:text-amber-400 transition">
+            <a href="https://www.instagram.com/hotel_rajsik?igsh=YnBxc2N4Zml6aGkx" className="hover:text-amber-400 transition">
               <FaInstagram />
             </a>
             <a href="#" className="hover:text-amber-400 transition">
