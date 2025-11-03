@@ -56,9 +56,9 @@ const dishes = [
 
 export default function Home() {
   return (
-    <div className="font-body text-gray-800 bg-gradient-to-b from-amber-50 via-cream-light to-white overflow-x-hidden">
+    <div className="w-screen min-h-screen font-body text-gray-800 bg-gradient-to-b from-amber-50 via-cream-light to-white overflow-x-hidden overflow-y-auto">
       {/* HERO SECTION */}
-      <section className="relative h-screen w-screen bg-[url('/src/assets/bg2.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
+      <section className="relative w-screen h-screen bg-[url('/src/assets/bg2.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 sm:px-12">
           <motion.h1
@@ -69,7 +69,7 @@ export default function Home() {
           >
             Welcome to{" "}
             <span className="bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">
-              Hotel Rajshik
+              Hotel Rajsik
             </span>
           </motion.h1>
 
@@ -116,7 +116,7 @@ export default function Home() {
       {/* POPULAR DISHES */}
       <motion.section
         id="menu"
-        className="py-24 bg-gradient-to-b from-white to-amber-50"
+        className="w-full py-24 bg-gradient-to-b from-white to-amber-50"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -165,7 +165,7 @@ export default function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-4xl mx-auto px-6 text-center bg-white/70 backdrop-blur-lg py-16 rounded-3xl shadow-xl border border-amber-200">
+        <div className="max-w-4xl mx-auto px-6 text-center bg-white/80 backdrop-blur-md py-16 rounded-3xl shadow-xl border border-amber-200">
           <h2 className="text-4xl font-heading mb-6 text-gray-900">
             Reserve a Table
           </h2>
@@ -192,7 +192,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* GOOGLE REVIEWS */}
+      {/* REVIEWS */}
       <motion.section
         className="py-24 bg-gradient-to-b from-amber-50 to-amber-100"
         initial={{ opacity: 0, y: 50 }}
@@ -286,7 +286,7 @@ export default function Home() {
       </motion.section>
 
       {/* FOOTER */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-gray-900 text-gray-300 py-12 w-full">
         <div className="max-w-6xl mx-auto text-center space-y-4">
           <p className="text-gray-400">
             © 2025 Hotel Rajshik • Crafted with ❤️ for food lovers
@@ -307,3 +307,4 @@ export default function Home() {
     </div>
   );
 }
+
