@@ -273,7 +273,7 @@ export default function Home() {
             </div>
 
             <iframe
-              title="Rajshik Location"
+              title="Rajsik Location"
               src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121768.26397770019!2d73.42382793999582!3d17.495181410615555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bc2070011e9a17f%3A0x29ad0d1d51b40e36!2sFGW4%2B3FH%2C%20Kapsal%2C%20Chiplun%2C%20Maharashtra%20415605!3m2!1d17.4951994!2d73.50622969999999!5e0!3m2!1sen!2sin!4v1762173150031!5m2!1sen!2sin"
               width="100%"
               height="350"
