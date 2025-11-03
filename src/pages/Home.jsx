@@ -258,7 +258,7 @@ export default function Home() {
               </p>
               <p className="flex justify-center items-center gap-3">
                 <FaEnvelope className="text-amber-400 text-2xl" />{" "}
-                contact@hotelrajshik.com
+                contact@hotelrajsik.com
               </p>
               <div className="mt-6">
                 <a
