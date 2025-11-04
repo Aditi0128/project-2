@@ -33,7 +33,7 @@ export default function Booking() {
           className="text-left flex flex-col items-start"
         >
           <img
-            src="/images/bg3.jpg"
+            src="images/bg3.jpg"
             alt="Book a Table"
             className="w-full max-w-sm rounded-2xl shadow-lg mb-6"
           />
